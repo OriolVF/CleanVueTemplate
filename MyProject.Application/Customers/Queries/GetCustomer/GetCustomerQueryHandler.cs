@@ -1,26 +1,23 @@
 ﻿using System.Threading;
 using System.Threading.Tasks;
 using MediatR;
-using Microsoft.EntityFrameworkCore;
 using MyProject.Domain.Entities;
-using MyProject.Persistence;
+using MyProject.Domain.Interfaces;
 
 namespace MyProject.Application.Customers.Queries.GetCustomer
 {
     public class GetCustomerQueryHandler : IRequestHandler<GetCustomerQuery, Customer>
     {
-        private readonly MyProjectDbContext _dbContext;
+        private readonly IRepository<Customer> _repository;
 
-        public GetCustomerQueryHandler(MyProjectDbContext dbContext)
+        public GetCustomerQueryHandler(IRepository<Customer> repository )
         {
-            _dbContext = dbContext;
+            _repository = repository;
         }
 
         public async Task<Customer> Handle(GetCustomerQuery request, CancellationToken cancellationToken)
         {
-            return await _dbContext.Customers
-                                   .Include(c => c.Appointments)
-                                   .SingleOrDefaultAsync(c => c.Id == request.Id, cancellationToken);
+            return await _repository.GetById(request.Id);
         }
     }
 }
