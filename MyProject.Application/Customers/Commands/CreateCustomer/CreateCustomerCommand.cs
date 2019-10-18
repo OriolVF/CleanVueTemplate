@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿using System;
+using MediatR;
 
 namespace MyProject.Application.Customers.Commands.CreateCustomer
 {
@@ -6,6 +7,6 @@ namespace MyProject.Application.Customers.Commands.CreateCustomer
     {
         public string Name { get; set; }
         public string Surname { get; set; }
-        public int Age { get; set; }
+        public DateTime DateOfBirth { get; set; }
     }
 }

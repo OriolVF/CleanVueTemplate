@@ -19,7 +19,7 @@ namespace MyProject.Application.Customers.Commands.CreateCustomer
         {
             var customerEntity = new Customer()
             {
-                Age = request.Age,
+                DateOfBirth = request.DateOfBirth,
                 Name = request.Name,
                 Surname = request.Surname,
             };
