@@ -78,35 +78,35 @@ namespace MyProject.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("87d7c60e-8fe1-4a19-80e6-40dbca019485"),
-                            CreationDate = new DateTime(2019, 10, 18, 16, 10, 24, 331, DateTimeKind.Local).AddTicks(3523),
-                            CustomerId = new Guid("971f3745-fc7b-465a-9984-7c72747480b5"),
+                            Id = new Guid("e838f488-9281-4e32-9dcb-fe8be1c12df4"),
+                            CreationDate = new DateTime(2019, 11, 1, 15, 9, 42, 95, DateTimeKind.Local).AddTicks(1316),
+                            CustomerId = new Guid("0ab6c6dc-a4c7-4ce6-8094-eb304080dd38"),
                             Date = new DateTime(2019, 11, 10, 9, 30, 0, 0, DateTimeKind.Unspecified),
-                            LastUpdated = new DateTime(2019, 10, 18, 16, 10, 24, 331, DateTimeKind.Local).AddTicks(3051)
+                            LastUpdated = new DateTime(2019, 11, 1, 15, 9, 42, 95, DateTimeKind.Local).AddTicks(894)
                         },
                         new
                         {
-                            Id = new Guid("982ea09b-0a22-4e98-80a1-d172ac89e38a"),
-                            CreationDate = new DateTime(2019, 10, 18, 16, 10, 24, 331, DateTimeKind.Local).AddTicks(4004),
-                            CustomerId = new Guid("971f3745-fc7b-465a-9984-7c72747480b5"),
+                            Id = new Guid("0840fff3-ff2d-4962-aaaa-b1813b5838f5"),
+                            CreationDate = new DateTime(2019, 11, 1, 15, 9, 42, 95, DateTimeKind.Local).AddTicks(1729),
+                            CustomerId = new Guid("0ab6c6dc-a4c7-4ce6-8094-eb304080dd38"),
                             Date = new DateTime(2019, 10, 5, 15, 30, 0, 0, DateTimeKind.Unspecified),
-                            LastUpdated = new DateTime(2019, 10, 18, 16, 10, 24, 331, DateTimeKind.Local).AddTicks(3994)
+                            LastUpdated = new DateTime(2019, 11, 1, 15, 9, 42, 95, DateTimeKind.Local).AddTicks(1720)
                         },
                         new
                         {
-                            Id = new Guid("0f5031e8-497e-45f5-9662-c4e0c91c2e41"),
-                            CreationDate = new DateTime(2019, 10, 18, 16, 10, 24, 331, DateTimeKind.Local).AddTicks(4015),
-                            CustomerId = new Guid("999369bf-6c17-4575-8087-7445d0f47ba0"),
+                            Id = new Guid("d7861425-2876-48a5-82ea-b124f534e86a"),
+                            CreationDate = new DateTime(2019, 11, 1, 15, 9, 42, 95, DateTimeKind.Local).AddTicks(1738),
+                            CustomerId = new Guid("cb5358cf-7368-433c-a37b-b2d86ff34550"),
                             Date = new DateTime(2019, 10, 31, 12, 30, 0, 0, DateTimeKind.Unspecified),
-                            LastUpdated = new DateTime(2019, 10, 18, 16, 10, 24, 331, DateTimeKind.Local).AddTicks(4012)
+                            LastUpdated = new DateTime(2019, 11, 1, 15, 9, 42, 95, DateTimeKind.Local).AddTicks(1736)
                         },
                         new
                         {
-                            Id = new Guid("4df23fae-2a32-4c50-a697-45f8bcc7bf4d"),
-                            CreationDate = new DateTime(2019, 10, 18, 16, 10, 24, 331, DateTimeKind.Local).AddTicks(4021),
-                            CustomerId = new Guid("28dcee5f-0509-4e04-9162-ac8a3bd601ca"),
+                            Id = new Guid("0e90c6a6-ee13-4e76-8c33-da025b1ad5bd"),
+                            CreationDate = new DateTime(2019, 11, 1, 15, 9, 42, 95, DateTimeKind.Local).AddTicks(1744),
+                            CustomerId = new Guid("d4bee3e0-9a23-45fa-ad51-29daab009c4f"),
                             Date = new DateTime(2019, 12, 25, 18, 15, 0, 0, DateTimeKind.Unspecified),
-                            LastUpdated = new DateTime(2019, 10, 18, 16, 10, 24, 331, DateTimeKind.Local).AddTicks(4018)
+                            LastUpdated = new DateTime(2019, 11, 1, 15, 9, 42, 95, DateTimeKind.Local).AddTicks(1742)
                         });
                 });
 
@@ -119,28 +119,28 @@ namespace MyProject.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("971f3745-fc7b-465a-9984-7c72747480b5"),
-                            CreationDate = new DateTime(2019, 10, 18, 16, 10, 24, 326, DateTimeKind.Local).AddTicks(5407),
+                            Id = new Guid("0ab6c6dc-a4c7-4ce6-8094-eb304080dd38"),
+                            CreationDate = new DateTime(2019, 11, 1, 15, 9, 42, 88, DateTimeKind.Local).AddTicks(6521),
                             DateOfBirth = new DateTime(1980, 3, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            LastUpdated = new DateTime(2019, 10, 18, 16, 10, 24, 328, DateTimeKind.Local).AddTicks(6586),
+                            LastUpdated = new DateTime(2019, 11, 1, 15, 9, 42, 91, DateTimeKind.Local).AddTicks(5749),
                             Name = "Daniel",
                             Surname = "Hoffman"
                         },
                         new
                         {
-                            Id = new Guid("999369bf-6c17-4575-8087-7445d0f47ba0"),
-                            CreationDate = new DateTime(2019, 10, 18, 16, 10, 24, 328, DateTimeKind.Local).AddTicks(7167),
+                            Id = new Guid("cb5358cf-7368-433c-a37b-b2d86ff34550"),
+                            CreationDate = new DateTime(2019, 11, 1, 15, 9, 42, 91, DateTimeKind.Local).AddTicks(6556),
                             DateOfBirth = new DateTime(1977, 9, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            LastUpdated = new DateTime(2019, 10, 18, 16, 10, 24, 328, DateTimeKind.Local).AddTicks(7177),
+                            LastUpdated = new DateTime(2019, 11, 1, 15, 9, 42, 91, DateTimeKind.Local).AddTicks(6570),
                             Name = "Albert",
                             Surname = "Heisenower"
                         },
                         new
                         {
-                            Id = new Guid("28dcee5f-0509-4e04-9162-ac8a3bd601ca"),
-                            CreationDate = new DateTime(2019, 10, 18, 16, 10, 24, 328, DateTimeKind.Local).AddTicks(7185),
+                            Id = new Guid("d4bee3e0-9a23-45fa-ad51-29daab009c4f"),
+                            CreationDate = new DateTime(2019, 11, 1, 15, 9, 42, 91, DateTimeKind.Local).AddTicks(6581),
                             DateOfBirth = new DateTime(1960, 8, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            LastUpdated = new DateTime(2019, 10, 18, 16, 10, 24, 328, DateTimeKind.Local).AddTicks(7188),
+                            LastUpdated = new DateTime(2019, 11, 1, 15, 9, 42, 91, DateTimeKind.Local).AddTicks(6584),
                             Name = "Stephen",
                             Surname = "King"
                         });
