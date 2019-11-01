@@ -9,6 +9,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using MyProject.Application.Customers.Queries.GetCustomer;
+using MyProject.Domain.Interfaces;
 using Swashbuckle.AspNetCore.Swagger;
 using VueCliMiddleware;
 
@@ -42,6 +43,9 @@ namespace MyProject.Api
                 Version = "v1"
             }));
             services.AddMediatR(typeof(GetCustomerQuery).Assembly);
+
+            services.AddTransient<IRepository<Customer>, Repository<Customer>>();
+            services.AddTransient<IRepository<Appointment>, Repository<Appointment>>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

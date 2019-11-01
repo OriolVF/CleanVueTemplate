@@ -1,31 +1,30 @@
 ﻿using System.Threading;
 using System.Threading.Tasks;
 using MyProject.Domain.Entities;
-using MyProject.Persistence;
 using MediatR;
+using MyProject.Domain.Interfaces;
 
 namespace MyProject.Application.Customers.Commands.CreateCustomer
 {
     public class CreateCustomerCommandHandler : IRequestHandler<CreateCustomerCommand>
     {
-        private readonly MyProjectDbContext _dbContext;
+        private readonly IRepository<Customer> _repository;
 
-        public CreateCustomerCommandHandler(MyProjectDbContext dbContext)
+        public CreateCustomerCommandHandler(IRepository<Customer> repository)
         {
-            _dbContext = dbContext;
+            _repository = repository;
         }
 
         public async Task<Unit> Handle(CreateCustomerCommand request, CancellationToken cancellationToken)
         {
-            var CustomerEntity = new Customer()
+            var customerEntity = new Customer()
             {
-                Age = request.Age,
+                DateOfBirth = request.DateOfBirth,
                 Name = request.Name,
                 Surname = request.Surname,
             };
 
-            _dbContext.Customers.Add(CustomerEntity);
-            await _dbContext.SaveChangesAsync(cancellationToken);
+            await _repository.Add(customerEntity);
 
             return Unit.Value;
         }

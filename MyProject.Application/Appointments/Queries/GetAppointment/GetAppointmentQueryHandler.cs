@@ -1,23 +1,23 @@
 ﻿using System.Threading;
 using System.Threading.Tasks;
 using MyProject.Domain.Entities;
-using MyProject.Persistence;
 using MediatR;
+using MyProject.Domain.Interfaces;
 
 namespace MyProject.Application.Appointments.Queries.GetAppointment
 {
     public class GetAppointmentQueryHandler : IRequestHandler<GetAppointmentCommand, Appointment>
     {
-        private readonly MyProjectDbContext _dbContext;
+        private readonly IRepository<Appointment> _repository;
 
-        public GetAppointmentQueryHandler(MyProjectDbContext dbContext)
+        public GetAppointmentQueryHandler(IRepository<Appointment> repository)
         {
-            _dbContext = dbContext;
+            _repository = repository;
         }
 
         public async Task<Appointment> Handle(GetAppointmentCommand request, CancellationToken cancellationToken)
         {
-            return await _dbContext.Appointments.FindAsync(request.Id);
+            return await _repository.GetById(request.Id);
         }
     }
 }

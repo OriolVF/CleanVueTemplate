@@ -1,18 +1,18 @@
 ﻿using System.Threading;
 using System.Threading.Tasks;
 using MyProject.Domain.Entities;
-using MyProject.Persistence;
 using MediatR;
+using MyProject.Domain.Interfaces;
 
 namespace MyProject.Application.Appointments.Commands.CreateAppointment
 {
     public class CreateAppointmentCommandHandler : IRequestHandler<CreateAppointmentCommand>
     {
-        private readonly MyProjectDbContext _dbContext;
+        private readonly IRepository<Appointment> _repository;
 
-        public CreateAppointmentCommandHandler(MyProjectDbContext dbContext)
+        public CreateAppointmentCommandHandler(IRepository<Appointment> repository)
         {
-            _dbContext = dbContext;
+            _repository = repository;
         }
 
         public async Task<Unit> Handle(CreateAppointmentCommand request, CancellationToken cancellationToken)
@@ -23,8 +23,7 @@ namespace MyProject.Application.Appointments.Commands.CreateAppointment
                 Date = request.Date
             };
 
-            _dbContext.Appointments.Add(entity);
-            await _dbContext.SaveChangesAsync(cancellationToken);
+            await _repository.Add(entity);
 
             return Unit.Value;
         }
